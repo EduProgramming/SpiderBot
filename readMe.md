@@ -4,7 +4,11 @@
 
 ## Index
 
-1. [**a01_led_on**](./a01_led_on)
+1. [**a01_led_on**](./a01_led_on/a01_led_on.ino)
 
 RGB LED 중에 초록색만 ON
+
+2. [**a02_led_blink**](./a02_led_blink/a02_led_blink.ino)
+
+초록색 LED Blink
 

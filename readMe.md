@@ -34,3 +34,21 @@ LED 점점 밝아졌다가 어두워지기(반복문)
 
 LED 점점 밝아졌다가 어두워지기
 
+
+
+### :notes:수동 부저 제어
+
+1. [**b01_buzzer_base**](./b01_buzzer_base/b01_buzzer_base.ino)
+
+부저 소리내보기
+
+2. [**b02_buzzer_and_led**](./b02_buzzer_and_led/b02_buzzer_and_led.ino)
+
+LED와 부저를 이용한 알림
+
+3. [**b03_buzzer_and_led_func**](./b03_buzzer_and_led_func/b03_buzzer_and_led_func.ino)
+
+LED와 부저를 이용한 알림(함수 사용)
+
+
+

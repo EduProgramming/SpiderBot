@@ -64,3 +64,11 @@ LED와 부저를 이용한 알림(함수 사용)
 >
 > ex) 도난장치 경보 알림, 초음파 센서 피아노
 
+
+
+### :large_blue_diamond:블루투스 HC06
+
+1. [d01_bluetooth_setting](./d01_bluetooth_setting/d01_bluetooth_setting.ino)
+
+블루투스 HC06 이름 설정 바꾸기
+

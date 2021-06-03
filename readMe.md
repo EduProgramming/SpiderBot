@@ -4,6 +4,8 @@
 
 ## Index
 
+### :traffic_light: LED 제어
+
 1. [**a01_led_on**](./a01_led_on/a01_led_on.ino)
 
 RGB LED 중에 초록색만 ON
@@ -23,4 +25,12 @@ LED 빛의 세기를 제어
 5. [**a05_pwm_rgb_led**](./a05_pwm_rgb_led/a05_pwm_rgb_led.ino)
 
 RGB LED를 이용하여 다양한 색상 ON
+
+6. [**a06_led_power_ctrl**](./a06_led_power_ctrl/a06_led_power_ctrl.ino)
+
+LED 점점 밝아졌다가 어두워지기(반복문)
+
+7. [**a07_led_power_ctrl**](./a07_led_power_ctrl/a07_led_power_ctrl.ino)
+
+LED 점점 밝아졌다가 어두워지기
 

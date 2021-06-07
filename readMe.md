@@ -72,3 +72,15 @@ LED와 부저를 이용한 알림(함수 사용)
 
 블루투스 HC06 이름 설정 바꾸기
 
+2. [d02_bluetooth_ctrl](./d02_bluetooth_ctrl/d02_bluetooth_ctrl.ino)
+
+블루투스 HC06 명령어를 보내어 LED Turn On/OFF
+
+
+
+### :racing_car:기능 구현
+
+1. [e01_spider_motor_ctrl](./e01_spider_motor_ctrl/e01_spider_motor_ctrl.ino)
+
+스파이더 모터 기능 구현하기
+

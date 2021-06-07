@@ -68,11 +68,11 @@ LED와 부저를 이용한 알림(함수 사용)
 
 ### :large_blue_diamond:블루투스 HC06
 
-1. [d01_bluetooth_setting](./d01_bluetooth_setting/d01_bluetooth_setting.ino)
+1. [**d01_bluetooth_setting**](./d01_bluetooth_setting/d01_bluetooth_setting.ino)
 
 블루투스 HC06 이름 설정 바꾸기
 
-2. [d02_bluetooth_ctrl](./d02_bluetooth_ctrl/d02_bluetooth_ctrl.ino)
+2. [**d02_bluetooth_ctrl**](./d02_bluetooth_ctrl/d02_bluetooth_ctrl.ino)
 
 블루투스 HC06 명령어를 보내어 LED Turn On/OFF
 
@@ -80,7 +80,17 @@ LED와 부저를 이용한 알림(함수 사용)
 
 ### :racing_car:기능 구현
 
-1. [e01_spider_motor_ctrl](./e01_spider_motor_ctrl/e01_spider_motor_ctrl.ino)
+1. [**e01_spider_motor_ctrl**](./e01_spider_motor_ctrl/e01_spider_motor_ctrl.ino)
 
 스파이더 모터 기능 구현하기
+
+
+
+### :triangular_flag_on_post:최종 소스
+
+1. [**f00_spider_bluetooth**](./f00_spider_bluetooth/f00_spider_bluetooth.ino)
+
+교구 배포되어 있는 소스 코드
+
+코딩을 배운 사람이라면 이렇게 작성하지 않기를 권장하는 차원으로 업로드
 

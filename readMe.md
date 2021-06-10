@@ -84,7 +84,7 @@ LED와 부저를 이용한 알림(함수 사용)
 
 스파이더 모터 기능 구현하기
 
-2. [e02_spider_obstacle_avoidance](./e02_spider_obstacle_avoidance/e02_spider_obstacle_avoidance.ino)
+2. [**e02_spider_obstacle_avoidance**](./e02_spider_obstacle_avoidance/e02_spider_obstacle_avoidance.ino)
 
 스파이더 장애물 회피 주행
 
@@ -97,4 +97,19 @@ LED와 부저를 이용한 알림(함수 사용)
 교구 배포되어 있는 소스 코드
 
 코딩을 배운 사람이라면 이렇게 작성하지 않기를 권장하는 차원으로 업로드
+
+2. [**f01_spider_devj**](./f01_spider_devj/f01_spider_devj.ino)
+
+생각없이 바로 작성한 소스로 그래도 코딩을 배운 사람이라면 이런식으로는 작성하는 것이 좋습니다.
+
+> **기능**
+>
+> - 기존 기능
+>   1. 구동
+>   2. 장애물 회피 주행
+> - 추가 기능
+>   3. 모터 속도 조절
+>   4. 초음파 센서 피아노
+>
+> 추가 기능은 App에 추가되어 있지 않습니다.
 

@@ -25,8 +25,6 @@ int PIN_GREEN_LED = 10;
 int PIN_BLUE_LED = 11;
 int PIN_TRIG = 12;
 int PIN_ECHO = 13;
-int PIN_LEFT_LED = 10;
-int PIN_RIGHT_LED = A0;
 int PIN_TX = A4;
 int PIN_RX = A5;
 
@@ -221,14 +219,11 @@ void setup() {
   pinMode(PIN_BLUE_LED, OUTPUT);
   pinMode(PIN_TRIG, OUTPUT);
   pinMode(PIN_ECHO, INPUT);
-  pinMode(PIN_LEFT_LED, OUTPUT);
-  pinMode(PIN_RIGHT_LED, OUTPUT);
 
   boolean state = false;
   for (int i=0; i < 4; i++) {
     state = !state; // !false -> true / !true -> false
-    digitalWrite(PIN_LEFT_LED, state);
-    digitalWrite(PIN_RIGHT_LED, state);
+    digitalWrite(PIN_GREEN_LED, state);
     delay(500);
   }
 

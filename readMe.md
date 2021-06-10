@@ -84,6 +84,10 @@ LED와 부저를 이용한 알림(함수 사용)
 
 스파이더 모터 기능 구현하기
 
+2. [e02_spider_obstacle_avoidance](./e02_spider_obstacle_avoidance/e02_spider_obstacle_avoidance.ino)
+
+스파이더 장애물 회피 주행
+
 
 
 ### :triangular_flag_on_post:최종 소스

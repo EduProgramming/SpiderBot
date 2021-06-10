@@ -1,3 +1,13 @@
+/**
+ * 스파이더로봇 모터 제어
+ * @Auth TaeJuneJoung
+ * @Date 2021.06.07
+ * @Update 2021.06.10
+ * 
+ * 수정내용:
+ *   - LED 핀 번호 수정
+ */
+
 #include <SoftwareSerial.h>
 
 int PIN_BUZZER = 3;
@@ -7,10 +17,11 @@ int PIN_RIGHT_FW = 7;
 int PIN_RIGHT_BW = 8;
 int PIN_LEFT_PWM = 5;
 int PIN_RIGHT_PWM = 6;
+int PIN_RED_LED = 9;
+int PIN_GREEN_LED = 10;
+int PIN_BLUE_LED = 11;
 int PIN_TRIG = 12;
 int PIN_ECHO = 13;
-int PIN_LEFT_LED = 10;
-int PIN_RIGHT_LED = A0;
 int PIN_TX = A4;
 int PIN_RX = A5;
 
@@ -77,16 +88,16 @@ void setup() {
   pinMode(PIN_RIGHT_BW, OUTPUT);
   pinMode(PIN_LEFT_PWM, OUTPUT);
   pinMode(PIN_RIGHT_PWM, OUTPUT);
+  pinMode(PIN_RED_LED, OUTPUT);
+  pinMode(PIN_GREEN_LED, OUTPUT);
+  pinMode(PIN_BLUE_LED, OUTPUT);
   pinMode(PIN_TRIG, OUTPUT);
   pinMode(PIN_ECHO, INPUT);
-  pinMode(PIN_LEFT_LED, OUTPUT);
-  pinMode(PIN_RIGHT_LED, OUTPUT);
 
   boolean state = false;
   for (int i=0; i < 4; i++) {
     state = !state; // !false -> true / !true -> false
-    digitalWrite(PIN_LEFT_LED, state);
-    digitalWrite(PIN_RIGHT_LED, state);
+    digitalWrite(PIN_GREEN_LED, state);
     delay(500);
   }
 

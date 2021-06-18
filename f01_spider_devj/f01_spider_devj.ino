@@ -69,6 +69,8 @@ void directionControl(boolean isLeftFront, boolean isRightFront) {
   digitalWrite(PIN_LEFT_BW, !isLeftFront);
   digitalWrite(PIN_RIGHT_FW, isRightFront);
   digitalWrite(PIN_RIGHT_BW, !isRightFront);
+  analogWrite(PIN_LEFT_PWM, motorSpeed);
+  analogWrite(PIN_RIGHT_PWM, motorSpeed);
 }
 
 /**

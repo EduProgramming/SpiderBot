@@ -136,7 +136,7 @@ void writeBuffer(int index, unsigned char c) {
  * @params leftWheel, rightWheel, leftSpeed, rightSpeed
  */
 void ctrlMotor(int leftWheel, int rightWheel, int leftSpeed, int rightSpeed) {
-  if (leftSpeed == 0 && rightSpeed == 0) { // Stop Motor
+  if (leftWheel == 2 && rightWheel == 2 or leftSpeed == 0 && rightSpeed == 0) { // Stop Motor
     digitalWrite(PIN_LEFT_WHEEL_FW, LOW);
     digitalWrite(PIN_LEFT_WHEEL_BW, LOW);
     digitalWrite(PIN_RIGHT_WHEEL_FW, LOW);
@@ -147,10 +147,10 @@ void ctrlMotor(int leftWheel, int rightWheel, int leftSpeed, int rightSpeed) {
     boolean leftState = leftWheel ? true : false;
     boolean rightState = rightWheel ? true : false;
     
-    digitalWrite(PIN_LEFT_WHEEL_FW, leftState);
-    digitalWrite(PIN_LEFT_WHEEL_BW, !leftState);
-    digitalWrite(PIN_RIGHT_WHEEL_FW, rightWheel);
-    digitalWrite(PIN_RIGHT_WHEEL_BW, !rightWheel);
+    digitalWrite(PIN_LEFT_WHEEL_FW, !leftState);
+    digitalWrite(PIN_LEFT_WHEEL_BW, leftState);
+    digitalWrite(PIN_RIGHT_WHEEL_FW, !rightWheel);
+    digitalWrite(PIN_RIGHT_WHEEL_BW, rightWheel);
     analogWrite(PIN_LEFT_WHEEL_SP, leftSpeed);
     analogWrite(PIN_RIGHT_WHEEL_SP, rightSpeed);
   }
@@ -204,8 +204,8 @@ void obstacleAvoidanceDriving(int distance, int direct, int turnTime, int leftSp
   int command = 1;
   analogWrite(PIN_LEFT_WHEEL_SP, leftSpeed);
   analogWrite(PIN_RIGHT_WHEEL_SP, rightSpeed);
-  int frontInt = 1;
-  int backInt = 0;
+  int frontInt = 0;
+  int backInt = 1;
   
   while (mode == command) {
     float distanceVal = getDistance();
@@ -257,15 +257,21 @@ void playAirPiano(int distance, int soundTime, int sleepTime, int octave) {
   int command = 2;
   
   while (mode == command) {
-    int distanceVal = int(getDistance() / distance);
-    if (distanceVal < 8) {
-      unsigned long soundTimeVal = soundTime * 100;
-      unsigned long sleepTimeVal = sleepTime * 100;
-      pianoLedControl(PIANO_LED[distanceVal][0], PIANO_LED[distanceVal][1], PIANO_LED[distanceVal][2]);
-      tone(PIN_BUZZER, NOTES[octave][distanceVal], soundTimeVal);
-      pianoRestTimer(command, soundTimeVal + sleepTimeVal);
-    } else {
-      pianoLedControl(false, false, false);
+    if (distance) {
+      int distanceVal = int(getDistance() / distance);
+      if (distanceVal < 8) {
+        unsigned long soundTimeVal = soundTime * 100;
+        unsigned long sleepTimeVal = sleepTime * 100;
+        if (soundTime == 0) {
+          noTone(PIN_BUZZER);
+        } else {
+          pianoLedControl(PIANO_LED[distanceVal][0], PIANO_LED[distanceVal][1], PIANO_LED[distanceVal][2]);
+          tone(PIN_BUZZER, NOTES[octave][distanceVal], soundTimeVal);
+          pianoRestTimer(command, soundTimeVal + sleepTimeVal);
+        }
+      } else {
+        pianoLedControl(false, false, false);
+      }
     }
     getData();
   }
